@@ -12,6 +12,10 @@ app.get('/api/Email', async (req,res) => {
 	let data = req.query;
     
 console.log(data);
+res.send(data);
+
+    console.log('Sent list of items',JSON.stringify(data));
+});
 const pm = await ProtonMail.connect({
     username: 'rohitsingh95598@proton.me',
     password: 'SFDC@123'
@@ -24,10 +28,7 @@ console.log(pm);
   })
 	
   pm.close()
-res.send(data);
 
-    console.log('Sent list of items',JSON.stringify(data));
-});
 
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/build/index.html'));
