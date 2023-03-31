@@ -7,31 +7,31 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 
-/*
+
 app.get('/api/Email', async (req,res) => {
 	//let endPoint
 	let data = req.query;
-    
-console.log(data);
-res.send(data);
 
-    console.log('Sent list of items',JSON.stringify(data));
-});
-const pm = await ProtonMail.connect({
-    username: 'rohitsingh95598@proton.me',
-    password: 'SFDC@123'
-  })
-console.log(pm);
-  await pm.sendEmail({
-    to: 'arun98.cloud@gmail.com',
-    subject: 'Send email tutorial',
-    body: 'Hello world'
-  })
-	
-  pm.close()
+	console.log(data);
+	res.send(data);
 
+	console.log('Sent list of items',JSON.stringify(data));
+	});
+	const pm = await ProtonMail.connect({
+	username: 'rohitsingh95598@proton.me',
+	password: 'SFDC@123'
+	})
+	console.log(pm);
+	await pm.sendEmail({
+	to: 'arun98.cloud@gmail.com',
+	subject: 'Send email tutorial',
+	body: 'Hello world'
+	})
 
-*/
+	pm.close()
+
+})
+
 
 const port = process.env.PORT || 5000;
 app.listen(port);
