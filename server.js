@@ -7,6 +7,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'build')));
 
 
+/*
 app.get('/api/Email', async (req,res) => {
 	//let endPoint
 	let data = req.query;
@@ -30,7 +31,7 @@ console.log(pm);
   pm.close()
 
 
-
+*/
 
 const port = process.env.PORT || 5000;
 app.listen(port);
